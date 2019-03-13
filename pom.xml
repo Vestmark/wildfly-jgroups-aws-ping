@@ -6,8 +6,9 @@
     <artifactId>soulwing-parent</artifactId>
     <version>13</version>
   </parent>
+  <groupId>org.soulwing</groupId>
   <artifactId>wildfly-jgroups-aws-ping</artifactId>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>1.0.5-VMINTERNAL</version>
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
   <description>
@@ -162,4 +163,10 @@
     <version.com.fasterxml.jackson.dataformat.cbor>2.6.6</version.com.fasterxml.jackson.dataformat.cbor>
     <modules.staging.directory>${project.build.directory}/modules</modules.staging.directory>
   </properties>
+  <distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://nexus.hq.viviport.com:8081/nexus/repository/snapshots/</url>
+   </snapshotRepository>
+  </distributionManagement>
 </project>
